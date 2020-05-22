@@ -34,7 +34,7 @@ body {
 }
 
 header {
-    height: 70vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -109,20 +109,62 @@ header {
     font-family: 'Oswald', sans-serif;
   }
   
+  .sobre,
   .contato,
   .portfolio {
     padding: 2em;
     margin-bottom: 1.5em;
     min-height: 100vh;
   }
+
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
   
+  .sobre h2,
   .contato,
   .portfolio h2 {
     color: whitesmoke;
     font-family: 'Oswald', sans-serif;
     font-size: 1.5em;
+    margin-bottom: 1.5em;
     text-align: center;
     text-shadow: black 0.2em 0.2em 0.3em
+  }
+
+  .sobre p {
+    color: whitesmoke;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1em;
+    margin-bottom: 0.5em;
+    text-indent: 1.4em;
+  }
+
+  .sobre a {
+    color: rgb(161, 5, 5);
+    text-decoration: underline;
+  }
+
+  .sobre .avatar {
+    float: left;
+    margin-right: 2em;
+  }
+
+  .sobre .avatar img {
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  @media (min-width: 600px) {
+    .sobre .avatar {
+      float: center;
+    }
   }
 
   .portfolio .grid {
@@ -153,9 +195,19 @@ header {
     transition: color 1s;
   }
 
+  .portfolio figcaption {
+    text-align: center;
+    text-decoration: none;
+    color: whitesmoke;
+  }
+
+  .portfolio a {
+    color: rgb(161, 5, 5);
+  }
+
   .portfolio figcaption:hover {
     color: rgb(161, 5, 5);
-    text-decoration: underline;
+    text-decoration: none;
   }
 
 .img-portfolio {
